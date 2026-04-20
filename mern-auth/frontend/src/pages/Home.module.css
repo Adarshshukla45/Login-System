@@ -1,0 +1,97 @@
+.page {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124,111,205,0.2) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.content {
+  text-align: center;
+  max-width: 580px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.5s ease;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.badge {
+  display: inline-block;
+  background: rgba(124,111,205,0.15);
+  border: 1px solid rgba(124,111,205,0.3);
+  color: var(--accent2);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.gradient {
+  background: linear-gradient(135deg, var(--accent2), #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.desc {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ctas { display: flex; gap: 14px; justify-content: center; margin-bottom: 44px; flex-wrap: wrap; }
+.primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.primary:hover { background: var(--accent2); text-decoration: none; }
+.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.secondary:hover { border-color: var(--text); color: var(--text); text-decoration: none; }
+.stack { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.tag {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+}

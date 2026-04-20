@@ -1,0 +1,58 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent2);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.greeting {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.link {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.link:hover { color: var(--text); text-decoration: none; }
+.linkBtn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.linkBtn:hover { background: var(--accent2); text-decoration: none; }
+.logoutBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.logoutBtn:hover { border-color: var(--danger); color: var(--danger); }
